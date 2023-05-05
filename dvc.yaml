@@ -1,8 +1,6 @@
 stages:
   test:
     cmd: echo "Hello Testing"
-  get_data:
-    cmd: dvc pull
   train_data:
     cmd: python train.py
     deps:
