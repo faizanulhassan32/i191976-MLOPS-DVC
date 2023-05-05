@@ -1,6 +1,10 @@
 stages:
   test:
-    cmd: echo "Hello Testing"
+    cmd: echo "Hello testing"
+  get_data:
+    cmd: dvc pull
+    outs:
+    - Dataset.csv
   train_data:
     cmd: python train.py
     deps:
