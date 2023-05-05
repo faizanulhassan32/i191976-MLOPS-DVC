@@ -1,0 +1,5 @@
+matplotlib
+dvc
+wget
+scikit-learn
+pandas
