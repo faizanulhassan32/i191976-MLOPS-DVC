@@ -2,15 +2,17 @@ stages:
   test:
     cmd: echo "Hello testing"
 
-  train_data:
-    cmd: |
-      dvc pull
-      python train.py
-    deps:
-    - dvc.yaml
-    - train.py
+  get_data:
+    cmd: dvc pull
     outs:
     - Dataset.csv
+
+  train_data:
+    cmd: python train.py
+    deps:
+    - Dataset.csv
+    outs:
+    - model.pkl
     metrics:
     - metrics.json:
         cache: false
