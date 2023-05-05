@@ -1,5 +1,6 @@
 matplotlib
 dvc
+dvc-gdrive
 wget
 scikit-learn
 pandas
